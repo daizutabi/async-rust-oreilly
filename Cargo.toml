@@ -1,3 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["async_rust/chapter_1/1_fib_blocking"]
+members = [
+    "async_rust/chapter_1/1_fib_blocking",
+    "async_rust/chapter_1/2_requests_blocking",
+]

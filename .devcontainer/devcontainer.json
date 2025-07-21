@@ -3,6 +3,8 @@
   "features": {
     "ghcr.io/devcontainers-extra/features/starship:1": {}
   },
+  "updateContentCommand": ".devcontainer/updateContent.sh",
+  "postCreateCommand": ".devcontainer/postCreate.sh",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -11,6 +13,5 @@
         "tamasfe.even-better-toml"
       ]
     }
-  },
-  "postCreateCommand": ".devcontainer/postCreate.sh"
+  }
 }
