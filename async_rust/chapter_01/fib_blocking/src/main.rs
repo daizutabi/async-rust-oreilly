@@ -12,7 +12,7 @@ fn main() {
 
     for i in 0..32 {
         let handle = thread::spawn(move || {
-            let result = fibonacci(40);
+            let result = fibonacci(4000);
             println!("Thread {} result: {}", i, result);
         });
         threads.push(handle);
