@@ -10,8 +10,9 @@ fn fibonacci(n: u64) -> u64 {
 fn main() {
     let mut threads = Vec::new();
 
-    for i in 0..32 {
+    for i in 0..8 {
         let handle = thread::spawn(move || {
+            println!("Thread {} start", i);
             let result = fibonacci(4000);
             println!("Thread {} result: {}", i, result);
         });
