@@ -1,9 +1,8 @@
-use std::process::{Command, Output};
-
+use std::process::Command;
 
 fn main() {
     // Replace `./path_to_your_binary` with the actual path to your compiled binary
-    let output: Output = Command::new("./connection_bin")
+    let output = Command::new("./connection_bin")
         .output()
         .expect("Failed to execute command");
 

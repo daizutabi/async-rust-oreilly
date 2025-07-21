@@ -1,6 +1,5 @@
 use reqwest::Error;
 
-
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     let url = "https://jsonplaceholder.typicode.com/posts/1";
@@ -10,7 +9,10 @@ async fn main() -> Result<(), Error> {
         let body = response.text().await?;
         println!("{}", body);
     } else {
-        println!("Failed to get a valid response. Status: {}", response.status());
+        println!(
+            "Failed to get a valid response. Status: {}",
+            response.status()
+        );
     }
 
     Ok(())
