@@ -10,4 +10,5 @@ members = [
     "async_rust/chapter_1/5_threads_and_condvar",
     "async_rust/chapter_1/6_file_io",
     "async_rust/chapter_1/7_improving_http_request_performance_with_async",
+    "async_rust/chapter_2/1_understanding_tasks",
 ]
