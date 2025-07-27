@@ -8,4 +8,5 @@ members = [
     "async_rust/chapter_1/3_process_per_connection/server",
     "async_rust/chapter_1/4_what_are_threads",
     "async_rust/chapter_1/5_threads_and_condvar",
+    "async_rust/chapter_1/6_file_io",
 ]
