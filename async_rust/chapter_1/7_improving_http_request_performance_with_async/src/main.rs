@@ -12,8 +12,8 @@ struct Response {
 }
 
 async fn fetch_data(seconds: u64) -> Result<Response, Error> {
-    let request_url = format!("https://httpbin.org/delay/{}", seconds);
-    let response = reqwest::get(&request_url).await?;
+    let url = format!("https://httpbin.org/delay/{}", seconds);
+    let response = reqwest::get(&url).await?;
     let delayed_response: Response = response.json().await?;
     Ok(delayed_response)
 }
