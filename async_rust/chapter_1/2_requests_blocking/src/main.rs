@@ -1,5 +1,6 @@
-use reqwest::Error;
 use std::time::Instant;
+
+use reqwest::Error;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {

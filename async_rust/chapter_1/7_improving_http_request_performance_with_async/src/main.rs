@@ -1,8 +1,8 @@
+use std::time::{Duration, Instant};
+
 use reqwest::Error;
 use serde::Deserialize;
 use serde_json;
-use std::time::Duration;
-use std::time::Instant;
 use tokio::time::sleep;
 
 #[derive(Deserialize, Debug)]
