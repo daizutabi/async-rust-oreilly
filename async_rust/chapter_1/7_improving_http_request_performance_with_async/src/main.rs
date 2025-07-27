@@ -1,11 +1,9 @@
 use reqwest::Error;
 use serde::Deserialize;
-use tokio::time::sleep;
+use serde_json;
 use std::time::Duration;
 use std::time::Instant;
-use serde_json;
-
-
+use tokio::time::sleep;
 
 #[derive(Deserialize, Debug)]
 struct Response {
@@ -20,7 +18,6 @@ async fn fetch_data(seconds: u64) -> Result<Response, Error> {
     Ok(delayed_response)
 }
 
-
 async fn calculate_last_login() {
     sleep(Duration::from_secs(1)).await;
     println!("Logged in 2 days ago");
@@ -31,9 +28,7 @@ async fn main() -> Result<(), Error> {
     let start_time = Instant::now();
     let data = fetch_data(5);
     let time_since = calculate_last_login();
-    let (posts, _) = tokio::join!(
-        data, time_since
-    );
+    let (posts, _) = tokio::join!(data, time_since);
     let duration = start_time.elapsed();
     println!("Fetched {:?}", posts);
     println!("Time taken: {:?}", duration);
